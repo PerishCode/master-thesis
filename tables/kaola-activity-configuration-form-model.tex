@@ -1,0 +1,39 @@
+
+
+\begin{table}[H]
+    \centering
+
+    \begin{threeparttable}
+        \small
+        \begin{tabular}{|lll|cccc|}
+            \hline
+            \multicolumn{3}{|c|}{数据模型}                  & \multicolumn{1}{c|}{输入组件}                   & \multicolumn{1}{c|}{容器组件}                    & \multicolumn{1}{c|}{布局方式}              & 依赖关系数量                                                               \\ \hline
+            \multicolumn{3}{|l|}{\begin{tabular}[c]{@{}l@{}}基础信息\\ Object\end{tabular}} & \multicolumn{1}{c|}{无}                         & \multicolumn{1}{c|}{Card}                        & \multicolumn{1}{c|}{列式}                  & 13                                                                         \\ \hline
+            \multicolumn{1}{|l|}{\multirow{7}{*}{}}         & \multicolumn{2}{l|}{\begin{tabular}[c]{@{}l@{}}ID\\ String\end{tabular}}  & \multicolumn{1}{c|}{Input}                       & \multicolumn{1}{c|}{Item}                  & \multicolumn{1}{c|}{行内}                  & 3                             \\ \cline{2-7}
+            \multicolumn{1}{|l|}{}                          & \multicolumn{2}{l|}{\begin{tabular}[c]{@{}l@{}}部署时间\\ Object\end{tabular}}  & \multicolumn{1}{c|}{\multirow{3}{*}{TimePicker}} & \multicolumn{1}{c|}{\multirow{3}{*}{Item}} & \multicolumn{1}{c|}{\multirow{3}{*}{行内}} & \multirow{3}{*}{2}            \\ \cline{2-3}
+            \multicolumn{1}{|l|}{}                          & \multicolumn{1}{l|}{\multirow{2}{*}{}}          & \begin{tabular}[c]{@{}l@{}}开始时间\\ String\textless{}Date\textgreater{}\end{tabular}                        & \multicolumn{1}{c|}{}                      & \multicolumn{1}{c|}{}                      & \multicolumn{1}{c|}{}     &   \\ \cline{3-3}
+            \multicolumn{1}{|l|}{}                          & \multicolumn{1}{l|}{}                           & \begin{tabular}[c]{@{}l@{}}结束时间\\ String\textless{}Date\textgreater{}\end{tabular}                        & \multicolumn{1}{c|}{}                      & \multicolumn{1}{c|}{}                      & \multicolumn{1}{c|}{}     &   \\ \cline{2-7}
+            \multicolumn{1}{|l|}{}                          & \multicolumn{2}{l|}{\begin{tabular}[c]{@{}l@{}}上线时间\\ Object\end{tabular}}  & \multicolumn{1}{c|}{\multirow{3}{*}{TimePicker}} & \multicolumn{1}{c|}{\multirow{3}{*}{Item}} & \multicolumn{1}{c|}{\multirow{3}{*}{行内}} & \multirow{3}{*}{3}            \\ \cline{2-3}
+            \multicolumn{1}{|l|}{}                          & \multicolumn{1}{l|}{\multirow{2}{*}{}}          & \begin{tabular}[c]{@{}l@{}}开始时间\\ String\textless{}Date\textgreater{}\end{tabular}                        & \multicolumn{1}{c|}{}                      & \multicolumn{1}{c|}{}                      & \multicolumn{1}{c|}{}     &   \\ \cline{3-3}
+            \multicolumn{1}{|l|}{}                          & \multicolumn{1}{l|}{}                           & \begin{tabular}[c]{@{}l@{}}结束时间\\ String\textless{}Date\textgreater{}\end{tabular}                        & \multicolumn{1}{c|}{}                      & \multicolumn{1}{c|}{}                      & \multicolumn{1}{c|}{}     &   \\ \hline
+            \multicolumn{3}{|l|}{\begin{tabular}[c]{@{}l@{}}页面排期\\ Object{[}{]}\end{tabular}} & \multicolumn{1}{c|}{无}                         & \multicolumn{1}{c|}{Tab}                         & \multicolumn{1}{c|}{列式}                  & 0                                                                          \\ \hline
+            \multicolumn{1}{|l|}{\multirow{4}{*}{}}         & \multicolumn{2}{l|}{\begin{tabular}[c]{@{}l@{}}页面外链\\ Object\end{tabular}} & \multicolumn{1}{c|}{无}                          & \multicolumn{1}{c|}{Collapse}              & \multicolumn{1}{c|}{列式}                  & 0                             \\ \cline{2-7}
+            \multicolumn{1}{|l|}{}                          & \multicolumn{1}{l|}{\multirow{3}{*}{}}          & \begin{tabular}[c]{@{}l@{}}外链渠道\\ String{[}{]}\end{tabular}                       & \multicolumn{1}{c|}{Checkbox}              & \multicolumn{1}{c|}{Item}                  & \multicolumn{1}{c|}{行内} & 6 \\ \cline{3-7}
+            \multicolumn{1}{|l|}{}                          & \multicolumn{1}{l|}{}                           & \begin{tabular}[c]{@{}l@{}}微信分享样式\\ Object\end{tabular}                       & \multicolumn{1}{c|}{定制组件}              & \multicolumn{1}{c|}{Divider}               & \multicolumn{1}{c|}{列式} & 1 \\ \cline{3-7}
+            \multicolumn{1}{|l|}{}                          & \multicolumn{1}{l|}{}                           & \begin{tabular}[c]{@{}l@{}}QQ分享样式\\ Object\end{tabular}                       & \multicolumn{1}{c|}{定制组件}              & \multicolumn{1}{c|}{Divider}               & \multicolumn{1}{c|}{列式} & 1 \\ \hline
+        \end{tabular}
+
+
+        \begin{tablenotes}
+            \item [1] 数据模型定义分别包含其关键字 Key 以及类型两部分
+            \item [2] 数据模型类型与 JSON 的基本类型对应，Object 表示 Key-Value 形式的键值对类型，[] 表示数组类型
+            \item [3] String<T> 表示数据的存储类型为字符串，逻辑类型为 T
+            \item [4] 略去涉密内容，仅保留常见字段
+        \end{tablenotes}
+
+        \normalsize
+    \end{threeparttable}
+
+    \caption{考拉海购业务表单模型案例}
+    \label{kaola-activity-configuration-form-model}
+\end{table}

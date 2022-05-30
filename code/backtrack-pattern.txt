@@ -1,0 +1,20 @@
+id: /^[_A-Za-z]\w*/
+int: /^\d+/
+
+S': S
+
+S: . S              // backtrack step
+ | A                // backtrack prefix
+ | ε
+
+A: [ + int ] B      // index increase
+ | [ - int ] B      // index decrease
+ | B
+
+B: id B'            // path start with id
+ | int B'           // path start with integer
+ | ε
+
+B': . B             // path concat
+  | [ int ] B       // path with index
+  | ε

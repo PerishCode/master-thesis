@@ -1,0 +1,25 @@
+\begin{table}[H]
+    \centering
+
+    \begin{threeparttable}
+        \small
+
+        \begin{tabular}{|c|p{12cm}<{\centering}|}
+            \hline
+            类型       & 样例                                                                                               \\ \hline
+            一对一依赖 & \textbf{上线时间}的值必须在\textbf{部署时间}当前值对应的时间段内，若该条件未满足，则生成校验错误信息 \\ \hline
+            一对多依赖 & \textbf{基础信息}的 count 变量的值为所有子字段的校验错误信息的数量之和                        \\ \hline
+            多对一依赖 & \textbf{微信分享样式}、\textbf{QQ分享样式} 仅在\textbf{外链渠道}存在相应的值时才可见               \\ \hline
+        \end{tabular}
+
+        \begin{tablenotes}
+            \item [1] 样例均取自\hyperref[kaola-activity-configuration-form-model]{表2-1} 中的表单数据模型
+
+        \end{tablenotes}
+
+        \normalsize
+    \end{threeparttable}
+
+    \caption{表单变量依赖关系分类}
+    \label{dependency-situations}
+\end{table}

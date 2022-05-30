@@ -1,0 +1,15 @@
+\begin{table}[h]
+    \centering
+    \scriptsize
+    \begin{tabular}{|l|l|l|l|}
+        \hline
+        \multicolumn{1}{|c|}{编号} & \multicolumn{1}{c|}{目标字段}       & \multicolumn{1}{c|}{说明}              & \multicolumn{1}{c|}{操作方式} \\ \hline
+        A                          & 基础信息.名称                       & 存在跨字段的一个依赖                             & 模拟用户输入                  \\ \hline
+        B                          & 基础信息.ID                         & 存在跨字段的两个依赖                   & 模拟用户输入                  \\ \hline
+        C                          & 基础信息.模块源                     & 存在同字段的一个依赖和跨字段的一个依赖 & 模拟用户输入                  \\ \hline
+        D                          & 页面排期[index].页面副标题.是否启用 & 深度为 4 但为内部状态        & 模拟用户点击                  \\ \hline
+    \end{tabular}
+    \normalsize
+    \caption{表单渲染性能测试样例设计}
+    \label{kaola-render-performence-testcases}
+\end{table}

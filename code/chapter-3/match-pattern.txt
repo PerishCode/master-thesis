@@ -1,0 +1,26 @@
+id: /^[_A-Za-z]\w*/
+int: /^\d+/
+
+S': S
+
+S: int A                // pattern start with integer 
+ | id A                 // pattern start with identifier
+ | ε                    
+
+A: [ B ] A              // range match
+ | [ int ] A            // specfic index match
+ | . * * A              // unlimited-steps glob
+ | . * ( ! C ) A        // anti-enum match
+ | . * ( C ) A          // enum match
+ | . * A                // one-step glob
+ | . S                  // recursive pattern
+ | ε
+
+B: int : int            // all-closed range
+ | int :                // left-closed range
+ | : int                // right-closed range
+
+C: id C'                // enum prefix
+
+C': , id                // enum suffix
+  | ε

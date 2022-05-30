@@ -1,0 +1,16 @@
+<html>
+  <body>
+    <!-- 声明页面元素 -->
+    <button id="trigger">Click Me</button>
+    <div id="output">Hello</div>
+    <script>
+      // 获取页面元素 DOM 节点实例
+      const trigger = document.getElementById("trigger")
+      const output = document.getElementById("output")
+      // 在目标节点的点击事件上挂载回调方法，更新另一节点的文本内容
+      trigger.addEventListener("click", () => {
+        output.textContent = "Hello World!"
+      })
+    </script>
+  </body>
+</html>

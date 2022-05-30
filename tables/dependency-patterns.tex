@@ -1,0 +1,14 @@
+\begin{table}[H]
+    \centering
+    \scriptsize
+    \begin{tabular}{|c|p{4cm}<{\centering}|p{7cm}<{\centering}|}
+        \hline
+        模式       & 说明                                          & 样例                                                                                                                                                                                    \\ \hline
+        一对一依赖 & $A.a\rightarrow B.b$                          & $\text{"基础信息.模块源"}.errors\rightarrow\text{"基础信息.模块源"}.value$，即 “模块源” 字段的校验信息依赖于其当前的输入值                                                              \\ \hline
+        一对多依赖 & $A.a\rightarrow \text{Set}\langle Node.Attribute\rangle()$ & $\text{"基础信息"}.errorCount\rightarrow\text{"基础信息.**"}.errors$，即 “基础信息” 字段的 errorCount 变量依赖于其所有孩子节点的校验信息                                                \\ \hline
+        多对一依赖 & $\text{Set}\langle Node.Attribute\rangle()\rightarrow A.a$ & $\text{"页面排期[index].页面外链.*(!外链渠道)"}.visible\rightarrow\text{"页面排期[index].页面外链.外链渠道"}.value$，即所有 “XX分享样式” 字段的显隐状态都依赖于 “外链渠道” 字段的输入值 \\ \hline
+    \end{tabular}
+    \normalsize
+    \caption{模型基础依赖模式测试用例}
+    \label{dependency-patterns}
+\end{table}

@@ -1,0 +1,128 @@
+\definecolor{light-gray}{rgb}{0.95, 0.95, 0.95}
+\definecolor{darkgray}{rgb}{0.4, 0.4, 0.4}
+\definecolor{editor-gray}{rgb}{0.95, 0.95, 0.95}
+\definecolor{editor-ocher}{rgb}{1, 0.5, 0} % #FF7F00 -> rgb(239, 169, 0)
+\definecolor{editor-green}{rgb}{0, 0.5, 0} % #007C00 -> rgb(0, 124, 0)
+\definecolor{orange}{rgb}{1,0.45,0.13}
+\definecolor{olive}{rgb}{0.17,0.59,0.20}
+\definecolor{brown}{rgb}{0.69,0.31,0.31}
+\definecolor{purple}{rgb}{0.38,0.18,0.81}
+\definecolor{light-blue}{rgb}{0.1,0.57,0.7}
+\definecolor{light-red}{rgb}{1,0.4,0.5}
+
+% JavaScript
+\lstdefinelanguage{JavaScript}{
+  morekeywords=[3]{typeof, new, true, false, catch, function, return, null, catch, switch, var, if, in, while, do, else, case, break, const},
+  keywordstyle=[3]\color{red},
+  morecomment=[s]{/*}{*/},
+  morecomment=[l]//,
+  morestring=[b]",
+  morestring=[b]'
+}
+
+\lstdefinelanguage{HTML5}{
+  language=html,
+  sensitive=true,
+  alsoletter={<>=-},
+  morecomment=[s]{<!--}{-->},
+  tag=[s],
+  otherkeywords={
+      html, body, button, div, script, span, input, Card, Input
+    },
+  ndkeywords={
+      =, charset=, src=, id=, width=, height=, style=, type=, rel=, href=,
+    },
+  identifierstyle=\color{black},
+  keywordstyle=\color{light-blue}\bfseries,
+  ndkeywordstyle=\color{editor-green}\bfseries,
+  stringstyle=\color{editor-ocher}\ttfamily,
+  commentstyle=\color{brown}\ttfamily,
+}
+
+\lstdefinestyle{HTML-with-JavaScript} {
+  basicstyle={\footnotesize\ttfamily},
+  frame=b,
+  xleftmargin={0.75cm},
+  numbers=left,
+  stepnumber=1,
+  firstnumber=1,
+  numberfirstline=true,
+  language=HTML5,
+  morekeywords=[3]{function, return},
+  keywordstyle=[3]\color{light-red},
+  morekeywords=[4]{const},
+  keywordstyle=[4]\color{red},
+  morecomment=[s]{/*}{*/},
+  morecomment=[l]//,
+  alsodigit={.:;},
+  tabsize=2,
+  showtabs=false,
+  showspaces=false,
+  showstringspaces=false,
+  extendedchars=true,
+  breaklines=true
+}
+
+\lstdefinestyle{component-example-style} {
+  basicstyle={\footnotesize\ttfamily},
+  frame=b,
+  xleftmargin={0.75cm},
+  numbers=left,
+  stepnumber=1,
+  firstnumber=1,
+  numberfirstline=true,
+  language=HTML5,
+  keywords={
+      html, body, button, div, script, span, input
+    },
+  morekeywords=[3]{function, return},
+  keywordstyle=[3]\color{light-red},
+  morekeywords=[4]{const},
+  keywordstyle=[4]\color{red},
+  morekeywords=[5]{value, title, onChange, setValue, children, props},
+  keywordstyle=[5]\color{orange},
+  morekeywords=[6]{Card, Input},
+  keywordstyle=[6]\color{editor-green},
+  morecomment=[s]{/*}{*/},
+  morecomment=[l]//,
+  alsodigit={.:;},
+  tabsize=2,
+  showtabs=false,
+  showspaces=false,
+  showstringspaces=false,
+  extendedchars=true,
+  breaklines=true
+}
+
+\lstdefinestyle{proxy-example} {
+  basicstyle={\footnotesize\ttfamily},
+  frame=b,
+  xleftmargin={0.75cm},
+  numbers=left,
+  stepnumber=1,
+  firstnumber=1,
+  numberfirstline=true,
+  % language=HTML5,
+  morestring=[b]",
+  stringstyle=\color{editor-ocher}\ttfamily,
+  morecomment=[s]{/*}{*/},
+  morecomment=[l]//,
+  commentstyle=\color{brown}\ttfamily,
+  morekeywords=[3]{function, return, class},
+  keywordstyle=[3]\color{light-red},
+  morekeywords=[4]{const},
+  keywordstyle=[4]\color{red},
+  morekeywords=[5]{Proxy, Reflect, Field, ObjectField, ArrayField},
+  keywordstyle=[5]\color{editor-green},
+  morekeywords=[6]{value, target, key},
+  keywordstyle=[6]\color{light-blue},
+  morecomment=[s]{/*}{*/},
+  morecomment=[l]//,
+  alsodigit={.:;},
+  tabsize=2,
+  showtabs=false,
+  showspaces=false,
+  showstringspaces=false,
+  extendedchars=true,
+  breaklines=true
+}
